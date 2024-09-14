@@ -3,21 +3,50 @@
   "nxCloudId": "66e43fe92cec373ea1905e26",
   "useInferencePlugins": true,
   "useDaemonProcess": true,
+  "namedInputs": {
+    "all": ["{projectRoot}/**/*"],
+    "noTest": ["!{projectRoot}/**/*.spec.ts"],
+    "noDist": ["!{projectRoot}/dist/*"],
+    "noMeta": ["!{projectRoot}/**/*.md"],
+    "production": ["all", "noTest", "noMeta", "noDist"],
+    "test": ["all", "noMeta", "noDist"]
+  },
   "targetDefaults": {
     "build": {
       "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["production"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "tsup-node --config tsup.config.ts -d {projectRoot}/dist --external {projectRoot}/package.json {projectRoot}/src/index.ts"
       }
     },
     "test": {
-      "executor": "@nx/node:test"
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["test"],
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "echo 'Tests not implemented yet'"
+      }
     },
     "lint": {
-      "executor": "@nx/node:lint"
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["all"],
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "echo 'Lint not implemented yet'"
+      }
     },
     "format": {
-      "executor": "@nx/node:format"
+      "executor": "nx:run-commands",
+      "cache": true,
+      "inputs": ["all"],
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "echo 'Format not implemented yet'"
+      }
     }
   },
   "plugins": []
