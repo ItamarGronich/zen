@@ -1,0 +1,12 @@
+{
+  "name": "core",
+  "sourceRoot": "packages/core/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {},
+    "test": {},
+    "lint": {},
+    "format": {}
+  }
+}

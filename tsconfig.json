@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "module": "NodeNext",
+    "lib": [
+      "es2020"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@zen/core": [
+        "packages/core/src/index.ts"
+      ]
+    },
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": false
+  },
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp",
+    "dist",
+    ".yarn",
+    ".pnp.*",
+    ".nx",
+    ".vscode",
+    ".idea",
+    ".vscode-test"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@zen/workspace",
+  "version": "0.0.1",
+  "description": "Zen is a unobtrusive package manager for Node.js",
+  "type": "module",
+  "keywords": [
+    "package manager",
+    "node.js"
+  ],
+  "author": "Itamar Gronich",
+  "license": "ISC",
+  "volta": {
+    "node": "22.8.0",
+    "yarn": "4.4.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@nx/js": "19.7.3",
+    "@swc/core": "^1.7.26",
+    "@types/node": "18.16.9",
+    "nx": "^19.7.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2"
+  }
+}
